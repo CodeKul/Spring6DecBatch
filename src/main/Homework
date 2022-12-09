@@ -21,3 +21,6 @@
 
 		Student s = Student.getStudent();
 		}
+
+
+2. Explain authentication & authorization with an example?
