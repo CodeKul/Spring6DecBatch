@@ -20,24 +20,32 @@ public class EmployeeController {
        return msg;
     }
 
-//    @GetMapping("/findAll")
-//    public List<Employee> getAllEmployee(){
-//        return employeeDao.findAll();
-//    }
-//
-//    @GetMapping("/findById/{userId}")
-//    public Employee findById(@PathVariable Long userId){
-//        return employeeDao.findById(userId);
-//    }
-//    @PutMapping("/updateEmployee/{usedId}")
-//    public String update(@RequestBody Employee employee,@PathVariable Long usedId){
-//        employeeDao.update(usedId,employee);
-//        return "Record updated successfully";
-//    }
-//    @DeleteMapping("/delete/{userId}")
-//    public String delete(@PathVariable Long userId){
-//        employeeDao.deleteById(userId);
-//        return "Record deleted successfully";
-//    }
+    @GetMapping("/findAll")
+    public List<Employee> getAllEmployee(){
+        return employeeDao.findAll();
+    }
+
+    @GetMapping("/findById/{userId}")
+    public Employee findById(@PathVariable("userId") Long userId1){
+        return employeeDao.findById(userId1);
+    }
+
+    @GetMapping("/findByName")
+    public  List<Employee>  findByName(@RequestParam String name,
+                               @RequestParam(required = false) String department){
+        return employeeDao.findByName(name,department);
+    }
+
+    @PutMapping("/updateEmployee/{empId}")
+    public String update(@RequestBody Employee employee,@PathVariable Long empId){
+        employeeDao.update(empId,employee);
+        return "Record updated successfully";
+    }
+
+    @DeleteMapping("/delete/{empId}")
+    public String delete(@PathVariable Long empId){
+        employeeDao.deleteById(empId);
+        return "Record deleted successfully";
+    }
 }
 

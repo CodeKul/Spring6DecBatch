@@ -24,3 +24,13 @@
 
 
 2. Explain authentication & authorization with an example?
+
+3. Add Employee
+	class Employee{
+		Long id;
+		String name;
+		Boolean visitedFlag;
+	}
+
+	List<Employee> = fetch all employees whose visitedFlag is false
+	randomly fetch one employee from list then update with visitedFlag true
