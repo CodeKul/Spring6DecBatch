@@ -1,7 +1,7 @@
-package com.codekul.Spring6DecBatch.jdbctemplate.dao;
+package com.codekul.Spring6DecBatch.jdbctemplate.employee.dao;
 
 
-import com.codekul.Spring6DecBatch.jdbctemplate.entity.Employee;
+import com.codekul.Spring6DecBatch.jdbctemplate.employee.entity.Employee;
 
 import java.util.List;
 

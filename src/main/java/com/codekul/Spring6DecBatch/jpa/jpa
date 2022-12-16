@@ -21,8 +21,9 @@ Relationships:
 JPA
 	- Java Persistence API
 	- allows to access & persist data between Java Object/class & relational DB
-
-
+	- reduce the amount of boilerplate code required to implement data access layers
+	- provides a solution to reduce a lot of boilerplate code
+	- a library/framework that adds an extra layer of abstraction on the top of our JPA provider (like Hibernate)
 Swagger
 	- provides a user interface to access RESTful web services via web browser.
 

@@ -1,4 +1,4 @@
-package com.codekul.Spring6DecBatch.jdbctemplate.entity;
+package com.codekul.Spring6DecBatch.jdbctemplate.employee.entity;
 
 import lombok.*;
 

@@ -1,7 +1,7 @@
-package com.codekul.Spring6DecBatch.jdbctemplate.controller;
+package com.codekul.Spring6DecBatch.jdbctemplate.employee.controller;
 
-import com.codekul.Spring6DecBatch.jdbctemplate.dao.EmployeeDao;
-import com.codekul.Spring6DecBatch.jdbctemplate.entity.Employee;
+import com.codekul.Spring6DecBatch.jdbctemplate.employee.dao.EmployeeDao;
+import com.codekul.Spring6DecBatch.jdbctemplate.employee.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +34,7 @@ public class EmployeeController {
     public  List<Employee>  findByName(@RequestParam String name,
                                @RequestParam(required = false) String department){
         return employeeDao.findByName(name,department);
+        //http://localhost:8081/emp/findByName?name=Ankita&department=Account&id=1
     }
 
     @PutMapping("/updateEmployee/{empId}")

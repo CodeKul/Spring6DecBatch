@@ -1,6 +1,6 @@
-package com.codekul.Spring6DecBatch.jdbctemplate.dao;
+package com.codekul.Spring6DecBatch.jdbctemplate.employee.dao;
 
-import com.codekul.Spring6DecBatch.jdbctemplate.entity.Employee;
+import com.codekul.Spring6DecBatch.jdbctemplate.employee.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
