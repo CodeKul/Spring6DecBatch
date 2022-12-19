@@ -27,3 +27,7 @@ JPA
 Swagger
 	- provides a user interface to access RESTful web services via web browser.
 
+
+
+JPA Repository methods:
+https://docs.spring.io/spring-data/jpa/docs/1.5.0.RELEASE/reference/html/jpa.repositories.html
