@@ -12,5 +12,11 @@ public interface CountryRepository extends JpaRepository<Country,Long> {
 
     Country findByCountryCode(String countryCode);
 
+    Boolean existsByCountryCode(String countryCode);
+    Boolean existsByCountryName(String countryName);
+
+
+    Country findByCountryCodeAndCountryName(String countryCode,String countryName);
+
     List<Country> findByCountryNameLike(String countryName);
 }
