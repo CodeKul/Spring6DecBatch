@@ -1,13 +1,7 @@
 package com.codekul.Spring6DecBatch;
 
-import com.codekul.Spring6DecBatch.di.Teacher;
-import com.codekul.Spring6DecBatch.config.AppConfig;
-import com.codekul.Spring6DecBatch.ioc.BubbleSort;
-import com.codekul.Spring6DecBatch.ioc.InsertionSort;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
 public class Spring6DecBatchApplication {

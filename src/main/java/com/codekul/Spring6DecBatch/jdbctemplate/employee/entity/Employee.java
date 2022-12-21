@@ -1,6 +1,7 @@
 package com.codekul.Spring6DecBatch.jdbctemplate.employee.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

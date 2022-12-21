@@ -1,7 +1,6 @@
 package com.codekul.Spring6DecBatch.jpa.relationships.service;
 
 import com.codekul.Spring6DecBatch.jpa.relationships.entity.Country;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
