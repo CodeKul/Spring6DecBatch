@@ -1,5 +1,6 @@
 package com.codekul.Spring6DecBatch.jpa.relationships.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +18,8 @@ public class Post {
     private Long id;
     private String post;
     private LocalDate postDate;
-    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id",referencedColumnName = "id")
     private List<Comments> comments;
 
