@@ -28,13 +28,41 @@ MongoDB
 	rows--------> Document - set of key-value Pairs
 	columns------> fields
 
+DataTypes:
+1. BSON - Binary Encoded Json - Date,Timestamp,ObjectId
+2. JSON - {"name":"abc","age":5}
+3. Integer
+4. Boolean
+5. Double
+6. Arrays
+7. Object
+8. Date
+9. Null
+10. Timestamp
+11. ObjectId
+
+Commands:
+	1. use <database_name> select database workspace(current using database)
+		- if db is not exist then it will create new db with specified name but did not showed in
+			show database command until collections created
+	2. to drop database db.dropDatabase()
+	3. db - currently working db
+	4. create collections
+		db.createCollection(name of collection);
+	5. insert
+		db.user.insertOne({name:"neha",designation:"BCA",email:"neha@gmail.com",mobile:"9856321455",
+		permanentAddress:{buildingName:"Sun Grandeur"}});
+	6. find by field value
+		db.user.find({name:"abhishek"})
+
+
 Commands
 1. use springpractice
 2. show dbs;
 3. db.user.insert({name:"aditya",age:25});
 4. db.user.find().pretty();
 5. db.dropDatabase();
-6.
+
 db.createUser(
   {
     user: "admin",
