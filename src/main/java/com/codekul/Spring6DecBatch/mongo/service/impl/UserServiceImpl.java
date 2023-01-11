@@ -21,4 +21,13 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
         return ResponseEntity.ok(apiResponse);
     }
+
+    @Override
+    public ResponseEntity<?> getUserByNameAndDesignation(String name, String designation) {
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setMessage("User Found");
+        apiResponse.setStatus(HttpStatus.OK.value());
+        apiResponse.setResult(userRepository.findByNameAndDesignation(name,designation));
+        return ResponseEntity.ok(apiResponse);
+    }
 }

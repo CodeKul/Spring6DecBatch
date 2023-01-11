@@ -54,6 +54,11 @@ Commands:
 		permanentAddress:{buildingName:"Sun Grandeur"}});
 	6. find by field value
 		db.user.find({name:"abhishek"})
+	7. and
+		spring6Dec> db.user.find({$and:[{name:'neha'},{designation:'BCA'}]});
+	8. or
+		spring6Dec> db.user.find({$or:[{name:'neha'},{designation:'BCA'}]});
+
 
 
 Commands
