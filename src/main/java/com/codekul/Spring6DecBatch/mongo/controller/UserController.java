@@ -22,4 +22,9 @@ public class UserController {
                                                          @RequestParam String designation){
         return userService.getUserByNameAndDesignation(name,designation);
     }
+
+    @GetMapping("/getUsersByCity/{city}")
+    public ResponseEntity<?> getUsersByCity(@PathVariable String city){
+        return userService.getUsersByCity(city);
+    }
 }

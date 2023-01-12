@@ -58,6 +58,9 @@ Commands:
 		spring6Dec> db.user.find({$and:[{name:'neha'},{designation:'BCA'}]});
 	8. or
 		spring6Dec> db.user.find({$or:[{name:'neha'},{designation:'BCA'}]});
+	9. find by embedded field
+		spring6Dec> db.user.find({'permanentAddress.city':'Pune'});
+
 
 
 

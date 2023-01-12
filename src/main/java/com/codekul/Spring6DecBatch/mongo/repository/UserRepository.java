@@ -9,4 +9,10 @@ import java.util.List;
 public interface UserRepository extends MongoRepository<User,String> {
     @Query(value = "{$and:[{name:?0},{designation:?1}]}",fields = "{'permanentAddress':0}")
     List<User> findByNameAndDesignation(String name, String designation);
+
+    @Query("{$or:[{name:?0},{designation:?1}]}")
+    List<User> findByNameOrDesignation(String name,String designation);
+
+    @Query("{'permanentAddress.city':?0}")
+    List<User> findUsersByCity(String city);
 }

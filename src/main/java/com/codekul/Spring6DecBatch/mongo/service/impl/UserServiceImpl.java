@@ -30,4 +30,13 @@ public class UserServiceImpl implements UserService {
         apiResponse.setResult(userRepository.findByNameAndDesignation(name,designation));
         return ResponseEntity.ok(apiResponse);
     }
+
+    @Override
+    public ResponseEntity<?> getUsersByCity(String city) {
+        ApiResponse apiResponse = new ApiResponse();
+        apiResponse.setMessage("Get users by city");
+        apiResponse.setStatus(HttpStatus.OK.value());
+        apiResponse.setResult(userRepository.findUsersByCity(city));
+        return ResponseEntity.ok(apiResponse);
+    }
 }

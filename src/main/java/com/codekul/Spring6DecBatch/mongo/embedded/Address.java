@@ -9,6 +9,7 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Address {
     private String buildingName;
-    public Integer flatNo;
-    public String landmark;
+    private Integer flatNo;
+    private String landmark;
+    private String city;
 }

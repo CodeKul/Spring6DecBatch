@@ -8,4 +8,6 @@ public interface UserService {
     ResponseEntity<?> createUser(User user);
 
     ResponseEntity<?> getUserByNameAndDesignation(String name,String designation);
+
+    ResponseEntity<?> getUsersByCity(String city);
 }
