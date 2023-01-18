@@ -27,4 +27,9 @@ public class UserController {
     public ResponseEntity<?> getUsersByCity(@PathVariable String city){
         return userService.getUsersByCity(city);
     }
+
+    @GetMapping("/searchUser")
+    public ResponseEntity<?> searchUser(@RequestParam String searchString){
+        return userService.searchUser(searchString);
+    }
 }

@@ -15,4 +15,7 @@ public interface UserRepository extends MongoRepository<User,String> {
 
     @Query("{'permanentAddress.city':?0}")
     List<User> findUsersByCity(String city);
+
+    @Query(value = "{$text:{$search:?0}}",fields = "{'permanentAddress':0,'correspondingAddress':0}")
+    List<User> searchUserByText(String searchString);
 }

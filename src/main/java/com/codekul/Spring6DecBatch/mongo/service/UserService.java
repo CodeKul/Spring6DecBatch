@@ -10,4 +10,6 @@ public interface UserService {
     ResponseEntity<?> getUserByNameAndDesignation(String name,String designation);
 
     ResponseEntity<?> getUsersByCity(String city);
+
+    ResponseEntity<?> searchUser(String searchString);
 }
