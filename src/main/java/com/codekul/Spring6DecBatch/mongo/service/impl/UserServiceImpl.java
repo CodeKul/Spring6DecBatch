@@ -1,6 +1,8 @@
 package com.codekul.Spring6DecBatch.mongo.service.impl;
 
 import com.codekul.Spring6DecBatch.mongo.model.User;
+import com.codekul.Spring6DecBatch.mongo.model.UserProfile;
+import com.codekul.Spring6DecBatch.mongo.repository.UserProfileRepository;
 import com.codekul.Spring6DecBatch.mongo.repository.UserRepository;
 import com.codekul.Spring6DecBatch.mongo.service.UserService;
 import com.codekul.Spring6DecBatch.util.ApiResponse;
@@ -15,6 +17,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private UserProfileRepository userProfileRepository;
     @Override
     public ResponseEntity<?> createUser(User user) {
         ApiResponse apiResponse = new ApiResponse();
@@ -56,5 +60,15 @@ public class UserServiceImpl implements UserService {
         apiResponse.setStatus(HttpStatus.OK.value());
         apiResponse.setResult(users);
         return ResponseEntity.ok(apiResponse);
+    }
+
+    @Override
+    public void saveUserProfile(UserProfile userProfile) {
+        userProfileRepository.save(userProfile);
+    }
+
+    @Override
+    public List<UserProfile> getAllUsersProfile() {
+        return userProfileRepository.findAll();
     }
 }
